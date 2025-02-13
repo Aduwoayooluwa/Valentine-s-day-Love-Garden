@@ -11,7 +11,15 @@ function App() {
     <div className="w-full h-screen relative">
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 15]} />
-        <OrbitControls enablePan={false} maxDistance={20} minDistance={10} />
+        <OrbitControls 
+          enablePan={false} 
+          maxDistance={20} 
+          minDistance={10}
+          enableDamping
+          dampingFactor={0.05}
+          rotateSpeed={0.5}
+          // touchAction="none"
+        />
         <color attach="background" args={['#ff69b4']} />
         <fog attach="fog" args={['#ff69b4', 5, 30]} />
         <ambientLight intensity={0.5} />

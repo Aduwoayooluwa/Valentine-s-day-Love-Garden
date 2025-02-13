@@ -30,7 +30,7 @@ function Heart({ position, id, scale }: { position: [number, number, number]; id
     }
   });
 
-  const handleClick = (event: any) => {
+  const handlePointerDown = (event: any) => {
     event.stopPropagation();
     incrementScore(1);
     checkLevelUp();
@@ -43,7 +43,7 @@ function Heart({ position, id, scale }: { position: [number, number, number]; id
         ref={mesh} 
         position={position} 
         scale={springScale}
-        onClick={handleClick}
+        onPointerDown={handlePointerDown}
       >
         <torusKnotGeometry args={[1, 0.3, 128, 16]} />
         <meshStandardMaterial color="#ff1493" metalness={0.5} roughness={0.2} />
@@ -67,7 +67,7 @@ function Obstacle({ position, id }: { position: [number, number, number]; id: st
     <mesh
       ref={mesh}
       position={position}
-      onClick={() => removeObstacle(id)}
+      onPointerDown={() => removeObstacle(id)}
     >
       <octahedronGeometry args={[1]} />
       <meshStandardMaterial color="#4a0404" wireframe />
