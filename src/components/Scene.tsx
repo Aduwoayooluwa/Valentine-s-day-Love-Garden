@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useRef, useEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useSpring, animated } from '@react-spring/three';
 import { Float } from '@react-three/drei';
-import { Mesh, Vector3 } from 'three';
+import { Mesh } from 'three';
 import { useStore } from '../store';
 
 function Heart({ position, id, scale }: { position: [number, number, number]; id: string; scale: number }) {

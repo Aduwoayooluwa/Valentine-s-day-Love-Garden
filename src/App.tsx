@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="w-full h-screen relative">
       <Canvas>
-        <PerspectiveCamera makeDefault position={[0, 0, 15]} />
+        <PerspectiveCamera makeDefault position={[0, 0, 12]} />
         <OrbitControls 
           enablePan={false} 
-          maxDistance={20} 
-          minDistance={10}
+          maxDistance={15} 
+          minDistance={8}
           enableDamping
           dampingFactor={0.05}
           rotateSpeed={0.5}

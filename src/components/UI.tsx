@@ -7,9 +7,9 @@ function UI() {
 
   const handleClick = () => {
     const position: [number, number, number] = [
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10
+      (Math.random() - 0.5) * 6,
+      (Math.random() - 0.5) * 6,
+      (Math.random() - 0.5) * 6
     ];
     addHeart(position);
   };

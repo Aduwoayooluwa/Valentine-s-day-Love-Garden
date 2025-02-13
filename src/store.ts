@@ -50,9 +50,9 @@ export const useStore = create<GameState>((set, get) => ({
     set((state) => ({
       obstacles: [...state.obstacles, {
         position: [
-          (Math.random() - 0.5) * 15,
-          (Math.random() - 0.5) * 15,
-          (Math.random() - 0.5) * 15
+          (Math.random() - 0.5) * 8,
+          (Math.random() - 0.5) * 8,
+          (Math.random() - 0.5) * 8
         ],
         id: Math.random().toString(36).substr(2, 9)
       }]
